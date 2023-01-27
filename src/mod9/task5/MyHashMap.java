@@ -184,20 +184,11 @@ public class MyHashMap<K, V> {
             return null;
         }
 
-        /**
-         * Удаляет запись по ключу
-         * Возвращает true, если удаление было выполнено
-         *
-         */
         public boolean remove(Object key) {
             Entry<K,V> e = deleteEntryForKey(key);
             return !(e == null);
         }
 
-        /**
-         * Удаляет и возвращает запись соответсвующую ключу
-         *
-         */
         private Entry<K,V> deleteEntryForKey(Object key) {
             int hash = (key == null) ? 0 : hash(key.hashCode());
             int i = indexFor(hash, table.length);
@@ -221,9 +212,6 @@ public class MyHashMap<K, V> {
             return e;
         }
 
-        /**
-         * Удаляет все элементы в таблице
-         */
         public void clear() {
             Entry[] tab = table;
             for (int i = 0; i < tab.length; i++)

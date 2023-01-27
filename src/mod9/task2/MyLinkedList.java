@@ -20,7 +20,7 @@ public class MyLinkedList<T> implements LikedList1<T> {
     public static <T> List<T> of(T... elements) {
         MyLinkedList<T> myLinkedList = new MyLinkedList<>();
         for (T e : elements) {
-            myLinkedList.add(e);
+            myLinkedList.add(myLinkedList.size(), e);
         }
         return (List<T>) myLinkedList;
     }
@@ -91,11 +91,6 @@ public class MyLinkedList<T> implements LikedList1<T> {
             size--;
         }
         return removedElement;
-    }
-
-    @Override
-    public void add(T e) {
-
     }
 }
 
