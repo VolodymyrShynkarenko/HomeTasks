@@ -16,7 +16,6 @@ class Task2 {
         try (BufferedReader br = new BufferedReader(new FileReader("src/mod10/task2/file.txt"))) {
             String headerLine = br.readLine();
 
-
             while ((line = br.readLine()) != null) {
                 String[] fields = line.split(" ");
                 User user = new User();
